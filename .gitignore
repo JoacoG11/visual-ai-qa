@@ -1,0 +1,34 @@
+# Venv / python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Local env
+.env
+.DS_Store
+
+# Logs
+*.log
+
+# ML / large artifacts
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.bin
+*.npz
+*.dylib
+*.so
+
+# Data / artifacts
+data/
+artifacts/
+models/
+
+# Node (si hay frontend)
+node_modules/
+dist/
+build/
