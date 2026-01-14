@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-const API = "http://localhost:8000";
+const API = "/api";
 
 export default function App() {
   const [mode, setMode] = useState("upload"); // "upload" | "gallery"

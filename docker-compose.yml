@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: visual_ai_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persistimos la DB y el storage
+      - ./backend/app/app.db:/app/app/app.db
+      - ./backend/app/storage:/app/app/storage
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: visual_ai_frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
