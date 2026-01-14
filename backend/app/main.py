@@ -4,9 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 from datetime import datetime, timezone
 import uuid
-import json
 from typing import Optional
-
 
 from ultralytics import YOLO
 from PIL import Image
@@ -30,7 +28,7 @@ app.add_middleware(
 # Servir imágenes subidas
 app.mount("/files", StaticFiles(directory=str(STORAGE_DIR)), name="files")
 
-# Cargamos modelo (primera vez puede demorar porque descarga pesos)
+# Cargamos modelo
 model = YOLO("yolov8n.pt")
 
 @app.on_event("startup")
